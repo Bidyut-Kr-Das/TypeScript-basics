@@ -83,5 +83,5 @@ console.log(makeCapital(Student1));
 let userName;
 // in typescript
 // now we can username can only accept values of the specified
-// userName='mota';//!invalid only specified values are accepted
+// userName='mota';  //!invalid only specified values are accepted
 userName = "bidyut"; //*valid
