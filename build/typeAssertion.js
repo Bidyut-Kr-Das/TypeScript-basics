@@ -11,6 +11,10 @@ let img = document.querySelector("img");
 // if we use like this
 let nextImg = document.querySelector("img");
 nextImg.src;
+// we can also tell typescript that the element is not null
+let nextToNextImage = document.querySelector("img");
+// The exclamation mark tells the typescript the element is not null
+nextToNextImage.src;
 // type assertion does not mean that the output will be errorless
 // example of wrong assertion
 let addOrConcat = (a, b, c) => {
@@ -19,4 +23,15 @@ let addOrConcat = (a, b, c) => {
     return a + b;
 };
 let myval = addOrConcat(2, 2, "add"); //as we are confirming typescript that the function will return a number
-let nextval = addOrConcat(2, 2, "add"); // we are telling typescript that the function will return string but the function is actually return number which will throw an error and our information about the return statement is wrong.
+let nextval = addOrConcat(2, 2, "add"); // we are telling typescript that the function will return string but the function is actually returning number which will throw an error and our information about the return statement is wrong.
+// practice of type assertion
+// js code
+// const yearDiv = document.getElementById("year");
+// const thisyear = new Date().getFullYear();
+// yearDiv.setAttribute("dateTime", thisyear);
+// yearDiv.textContent = thisyear;
+// ts refractoring
+const yearDiv = document.getElementById("year");
+const thisyear = new Date().getFullYear().toString();
+yearDiv.setAttribute("dateTime", thisyear);
+// yearDiv.textContent = thisyear;
